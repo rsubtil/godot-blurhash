@@ -45,4 +45,4 @@ BlurHash.decode("FT9Rquj[H;fQRPays:RjfQoffQj]fRay", 64, 96, 1.7)
 
 This addon is licensed under the MIT license. Full details at [LICENSE](LICENSE).
 
-This addon adapted the [C implementation](https://github.com/woltapp/blurhash/tree/master/C) of the BlurHash algorithm, which is also under the [MIT license](https://github.com/woltapp/blurhash/blob/master/License.md).
+This addon uses the [C implementation](https://github.com/woltapp/blurhash/tree/master/C) of the BlurHash algorithm, which is also under the [MIT license](https://github.com/woltapp/blurhash/blob/master/License.md). Other than some changes to integrate better in Godot, no modifications to the algorithm were made.
