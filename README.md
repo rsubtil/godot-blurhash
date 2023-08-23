@@ -11,6 +11,10 @@ This allows you to decode BlurHash strings: web-friendly and short strings that 
 
 > This is the Godot 3.x version. For the Godot 4.0 version, check the [main branch](https://github.com/rsubtil/godot-blurhash/tree/main)
 
+> **Warning**
+>
+> This version is no longer maintained. The BlurHash algorithm implementation in GDScript was orders of magnitude slower than the C implementation. Therefore, the addon was ported to GDExtension for Godot 4. Due to the extra work in maintaining two native addons, I'll not port this version to GDNative. If you want to do it, feel free to open a PR or fork this repository.
+
 The minimum Godot version is 3.5.2 (stable).
 
 Download this repository and copy the `addons` folder to your project root directory.
