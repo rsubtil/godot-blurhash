@@ -9,13 +9,13 @@ This allows you to decode BlurHash strings: web-friendly and short strings that 
 
 ## Installation
 
-> This is the Godot 4.0 version. For the Godot 3.x version, check the [3.x branch](https://github.com/rsubtil/godot-blurhash/tree/3.x)
+> This is the Godot 4.0 version. For the Godot 3.x version (unmaintained), check the [3.x branch](https://github.com/rsubtil/godot-blurhash/tree/3.x)
 
 The minimum Godot version is 4.0 (stable).
 
 Download this repository and copy the `addons` folder to your project root directory.
 
-Then activate **Godot-BlurHash** in your project plugins.
+Since this is a GDExtension addon, Godot should automatically load it once added.
 
 ## Usage
 
@@ -34,7 +34,7 @@ BlurHash.encode(preload("res://icon.svg"), 7, 2) # FT9Rquj[H;fQRPays:RjfQoffQj]f
 BlurHash.decode("LU9Rquj[H;fQRjfQoffQH;ayx^fQ", 128, 128)
 # Decode (with 64x96 size and "more" punch)
 # "punch" controls the output constrast; a bigger value makes the colors pop out more.
-BlurHash.decode("FT9Rquj[H;fQRPays:RjfQoffQj]fRay", 64, 96, 1.7)
+BlurHash.decode("FT9Rquj[H;fQRPays:RjfQoffQj]fRay", 64, 96, 2)
 ```
 
 > **Warning**

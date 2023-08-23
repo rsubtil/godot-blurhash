@@ -18,7 +18,13 @@ sources = Glob("src/*.cpp")
 sources += Glob("src/algorithm/*.c")
 
 if env["target"] == "template_debug":
-    env.Append(CCFLAGS=["-g", "-O0", "-DDEBUG_ENABLED"])
+    if env['PLATFORM'] == "win32":
+        env.Append(CCFLAGS=["/ZI", "/Od", "/DDEBUG_ENABLED"])
+    else:
+        env.Append(CCFLAGS=["-g", "-O0", "-DDEBUG_ENABLED"])
+
+if env['PLATFORM'] == "win32":
+    env.Append(CCFLAGS=["/NOIMPLIB", "/NOEXP"])
 
 platform_map = {
     "windows.x86_32": "win32",
