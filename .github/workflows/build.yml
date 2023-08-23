@@ -137,11 +137,11 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ${{github.workspace}}/.scons_cache/
-          key: ${{github.job}}-${{github.ref}}-${{github.sha}}
+          key: ${{matrix.opts.output}}-${{github.job}}-${{github.ref}}-${{github.sha}}
           restore-keys: |
-            ${{github.job}}-${{github.ref}}-${{github.sha}}
-            ${{github.job}}-${{github.ref}}
-            ${{github.job}}
+            ${{matrix.opts.output}}-${{github.job}}-${{github.ref}}-${{github.sha}}
+            ${{matrix.opts.output}}-${{github.job}}-${{github.ref}}
+            ${{matrix.opts.output}}-${{github.job}}
       - name: Compile extension
         shell: sh
         env:
